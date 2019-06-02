@@ -1,6 +1,7 @@
     
 <template>
-  <div class="ion-page">
+  <ion-page
+    class="ion-page">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-buttons slot="start">
@@ -12,7 +13,7 @@
     <ion-content padding>
       <ion-label>This is the details page</ion-label>
     </ion-content>
-  </div>
+  </ion-page>
 </template>
 
 <script>

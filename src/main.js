@@ -17,7 +17,7 @@ Vue.use(Ionic);
 const router = new IonicVueRouter({
   mode: "history",
   routes: [
-    { path: "/", redirect: "/tab1" },
+    { path: "/", redirect: "/home" },
 
     {
       path: "/home",

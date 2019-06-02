@@ -1,6 +1,7 @@
     
 <template>
-  <div class="ion-page">
+  <ion-page
+    class="ion-page">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>Ionic4 VueJS: Tab 1</ion-title>
@@ -10,7 +11,7 @@
       <ion-label>hello</ion-label>
       <ion-button @click="nextPage()">Next Page</ion-button>
     </ion-content>
-  </div>
+  </ion-page>
 </template>
 
 <script>
