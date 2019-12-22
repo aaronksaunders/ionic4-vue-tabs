@@ -9,9 +9,6 @@ Vue.config.productionTip = false;
 
 import { IonicVueRouter } from "@ionic/vue";
 Vue.use(IonicVueRouter);
-
-// import VueRouter from "vue-router";
-// Vue.use(VueRouter);
 Vue.use(Ionic);
 
 const router = new IonicVueRouter({
@@ -25,6 +22,7 @@ const router = new IonicVueRouter({
       component: () =>
         import(/* webpackChunkName: "home" */ "@/components/HelloWorld.vue"),
       children: [
+        { path: "/", redirect: "/tab1" },
         {
           path: "/tab1",
           name: "tab1",
@@ -38,7 +36,9 @@ const router = new IonicVueRouter({
           name: "tab1-details",
           components: {
             tab1: () =>
-              import(/* webpackChunkName: "tab1" */ "@/components/Tab1Details.vue")
+              import(
+                /* webpackChunkName: "tab1" */ "@/components/Tab1Details.vue"
+              )
           }
         },
         {
