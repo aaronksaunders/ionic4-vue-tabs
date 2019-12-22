@@ -1,4 +1,7 @@
 # ionic-tabs
+
+Updated December 22, 2019 to work with latest version of @ionic/vue
+
 ### Other Ionic Vue Samples
 - https://github.com/aaronksaunders/ionic4-vue-tabs
 - https://github.com/aaronksaunders/icon-vue
