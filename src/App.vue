@@ -1,14 +1,13 @@
 <template>
   <div id="app">
     <ion-app>
-      <ion-vue-router :animated="false"></ion-vue-router>
+      <ion-vue-router></ion-vue-router>
     </ion-app>
   </div>
 </template>
 
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "app",

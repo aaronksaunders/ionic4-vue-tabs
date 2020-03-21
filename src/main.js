@@ -13,18 +13,15 @@ Vue.use(Ionic);
 
 const router = new IonicVueRouter({
   mode: "history",
+  base: "/",
   routes: [
-    { path: "/", redirect: "/home" },
-
     {
-      path: "/home",
-      name: "home",
+      path: "/tabs",
       component: () =>
         import(/* webpackChunkName: "home" */ "@/components/HelloWorld.vue"),
       children: [
-        { path: "/", redirect: "/tab1" },
         {
-          path: "/tab1",
+          path: "tab1",
           name: "tab1",
           components: {
             tab1: () =>
@@ -32,7 +29,7 @@ const router = new IonicVueRouter({
           }
         },
         {
-          path: "/tab1/details",
+          path: "tab1/details",
           name: "tab1-details",
           components: {
             tab1: () =>
@@ -42,7 +39,7 @@ const router = new IonicVueRouter({
           }
         },
         {
-          path: "/tab2",
+          path: "tab2",
           name: "tab2",
           components: {
             tab2: () =>
@@ -50,7 +47,8 @@ const router = new IonicVueRouter({
           }
         }
       ]
-    }
+    },
+    { path: "/", redirect: "tabs/tab1" }
   ]
 });
 new Vue({

@@ -25,7 +25,6 @@ export default {
     }
   },
   onCreate() {
-    debugger;
   }
 };
 </script>

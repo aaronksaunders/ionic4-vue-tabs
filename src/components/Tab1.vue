@@ -1,7 +1,6 @@
     
 <template>
-  <ion-page
-    class="ion-page">
+  <ion-page class="ion-page">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>Ionic4 VueJS: Tab 1</ion-title>
@@ -16,15 +15,13 @@
 
 <script>
 export default {
-  name:"tab1",
+  name: "tab1",
   methods: {
     nextPage() {
-      this.$router.push("/tab1/details");
+      this.$router.push({ name: "tab1-details" });
     }
   },
-  onCreate() {
-    debugger;
-  }
+  onCreate() {}
 };
 </script>
 
