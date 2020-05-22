@@ -1,6 +1,6 @@
     
 <template>
-  <ion-page class="ion-page">
+  <div class="ion-page" id="tab2">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>Ionic4 VueJS: Tab 2</ion-title>
@@ -9,7 +9,7 @@
     <ion-content padding>
       <ion-item>THIS IS TAB 2</ion-item>
     </ion-content>
-  </ion-page>
+  </div>
 </template>
 
 <script>

@@ -1,7 +1,6 @@
     
 <template>
-  <ion-page
-    class="ion-page">
+  <div class="ion-page">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-buttons slot="start">
@@ -13,12 +12,12 @@
     <ion-content padding>
       <ion-label>This is the details page</ion-label>
     </ion-content>
-  </ion-page>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "tab1",
+  name: "tab1Details",
   methods: {
     nextPage() {
       this.$router.push("/geo-location-page");

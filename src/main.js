@@ -8,8 +8,9 @@ import "@ionic/core/css/ionic.bundle.css";
 Vue.config.productionTip = false;
 
 import { IonicVueRouter } from "@ionic/vue";
-Vue.use(IonicVueRouter);
 Vue.use(Ionic);
+Vue.use(IonicVueRouter);
+
 
 const router = new IonicVueRouter({
   mode: "history",
@@ -17,41 +18,35 @@ const router = new IonicVueRouter({
   routes: [
     {
       path: "/tabs",
-      component: () =>
-        import(/* webpackChunkName: "home" */ "@/components/HelloWorld.vue"),
+      component: () => import("@/components/TabRoot.vue"),
       children: [
         {
           path: "tab1",
           name: "tab1",
           components: {
-            tab1: () =>
-              import(/* webpackChunkName: "tab1" */ "@/components/Tab1.vue")
-          }
+            tab1Route: () => import("@/components/Tab1.vue"),
+          },
         },
         {
           path: "tab1/details",
           name: "tab1-details",
           components: {
-            tab1: () =>
-              import(
-                /* webpackChunkName: "tab1" */ "@/components/Tab1Details.vue"
-              )
-          }
+            tab1Route: () => import("@/components/Tab1Details.vue"),
+          },
         },
         {
           path: "tab2",
           name: "tab2",
           components: {
-            tab2: () =>
-              import(/* webpackChunkName: "tab2" */ "@/components/Tab2.vue")
-          }
-        }
-      ]
+            tab2Route: () => import("@/components/Tab2.vue"),
+          },
+        },
+      ],
     },
-    { path: "/", redirect: "tabs/tab1" }
-  ]
+    { path: "/", redirect: "tabs/tab1" },
+  ],
 });
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");
