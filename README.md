@@ -1,6 +1,6 @@
 # ionic-tabs
 
-Updated December 22, 2019 to work with latest version of @ionic/vue
+## Please see this project for tabs [New Vue3 Ionic Tabs](https://github.com/aaronksaunders/ionic-vue3-sample-2)
 
 ### Other Ionic Vue Samples
 - https://github.com/aaronksaunders/ionic4-vue-tabs
